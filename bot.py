@@ -1,3 +1,24 @@
+import signal
+import sys
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+
+# Define the signal handler
+def signal_handler(sig, frame):
+    logging.info('SIGTERM received. Cleaning up...')
+    # Perform any necessary cleanup here
+    sys.exit(0)
+
+# Register the signal handler
+signal.signal(signal.SIGTERM, signal_handler)
+
+# Your existing code starts here
+if __name__ == "__main__":
+    # Initialize and run your bot or application
+    pass
+  
 import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
