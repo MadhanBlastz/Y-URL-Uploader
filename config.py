@@ -33,6 +33,6 @@ class Config(object):
     # database uri (mongodb)
     DATABASE_NAME = "JOSProjects"
     DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://Madhan:N0password@cluster0.y0vtta6.mongodb.net/?retryWrites=true&w=majority")
-    ")
+    
     MAX_RESULTS = "50"
     AUTH_CHANNEL = os.environ.get("AUTH_CHANNEL", "-100")
